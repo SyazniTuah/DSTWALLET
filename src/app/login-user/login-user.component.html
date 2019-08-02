@@ -1,0 +1,22 @@
+<div class="login-page" [@routerTransition]>
+    <div class="row justify-content-md-center">
+        <div class="col-md-4">
+            <img src="assets/images/dst-logo.png" width="150px"/>
+            <h1>DST Dealer Management System</h1>
+            <form>
+                <div class="form-content">
+                    <div class="form-group">
+                        <input type="text" ng-model="name" class="form-control input-underline input-lg" ng-model = "username" id="username" placeholder="{{ 'Username' | translate }}">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" class="form-control input-underline input-lg" ng-model = "password" id="password" placeholder="{{ 'Password' | translate }}">
+                    </div>
+                </div>
+                <a class="btn btn-primary  btn-lg"  [routerLink]="['/dashboard']"  (click)="onLoggedin()">{{ 'Log in' | translate }}</a>
+                &nbsp;
+                <a class="btn btn-dst-purple btn-lg" [routerLink]="['/signup']">{{ 'Register' | translate }}</a>
+            </form>
+        </div>
+    </div>
+</div>
